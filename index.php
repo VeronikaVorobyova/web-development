@@ -15,26 +15,6 @@ $query = 'SELECT * FROM news WHERE id = 1';
 // выполняем запрос к базе данных
 $result = @mysqli_query($connection, $query);
 
-
-//echo '<img src=".\img\Biatlon.jpg">';
-//var_dump($result);
-// выводим полученные данные
-while($row = $result->fetch_assoc()){
-    echo  $row['id'];
-    echo  ' - ';
-    echo  $row['data'];
-    echo  ' - ';
-    echo  $row['title'];
-    echo  ' - ';
-    echo  $row['preview'];
-    echo  ' - ';
-    echo  $row['full_text'];
-    echo  ' - ';
-    echo  $row['pic'];
-    echo  '-';
-    echo  '<br>';
-}
-
 // закрываем соединение с базой
 mysqli_close($connection);
 ?>
@@ -47,7 +27,7 @@ mysqli_close($connection);
     </div>
     <a href="src/news1.html">
 
-        <img src="src/image/Hockey.jpg" style="width: 200px" alt=""/>
+        <img src="src/image/Hockey.jpg" style="width: 200px" alt="" />
         <p class="news">
             Сборная России по хоккею победила датчан в матче олимпийского турнира
         </p>
