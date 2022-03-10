@@ -2,11 +2,11 @@
 $database = require_once('./data/database.php');
 
 // Подключение к БД
-$mysqli = new mysqli($database['host'], $database['user'],
+$link = mysqli_connect($database['host'], $database['user'],
     $database['password'], $database['db_name']);
 
-if ($mysqli->connect_errno) {
-    echo "Не удалось подключиться к MySQL: (" . $mysqli->connect_errno . ") ";
+if ($link->connect_errno) {
+    echo "Не удалось подключиться к MySQL: (" . $link->connect_errno . ") ";
 }
 
 // проверка, авторизован ли пользователь под администратором ранее
