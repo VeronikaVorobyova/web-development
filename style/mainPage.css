@@ -24,7 +24,7 @@ h2 {
     background: #fff; /* Цвет фона правой колонки */
 }
 
-#news {
+#blockNews {
     display: flex;
     height: 100%;
 

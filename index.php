@@ -1,6 +1,12 @@
-<?php require_once 'templates/header.php'?>
+<?php
+// Начинаем сессию и подключаемся к БД
+session_start();
+require_once 'utils/connect.php';
+// ------------------------------------------
 
-<?php require_once 'templates/mainPage.php' ?>
-
-<?php require_once 'templates/footer.php'?>
+// Отрисовка
+require_once 'templates/header.php';
+require_once 'templates/mainPage.php';
+require_once 'templates/footer.php'
+?>
 
