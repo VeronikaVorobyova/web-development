@@ -1,16 +1,11 @@
-<head>
-    <link rel="stylesheet" href="style/mainPage.css"
-</head>
-
-<body>
 <div id="container">
     <div id="sidebar">
-        <p><a href="./auth/auth.php">Войти в систему</a></p>
-        <p><a href="./data/static/about.php">О сайте</a></p>
+        <p><a href="../auth/auth.php">Войти в систему</a></p>
+        <p><a href="../data/static/about.php">О сайте</a></p>
     </div>
     <div id="content">
         <div id="news">
-            <!--<div id="news1">
+            <div id="news1">
                 <div id="data1">
                     <p>
                         06.02.2022, 15:03
@@ -44,8 +39,7 @@
                         Француз Кентен Фийон Майе стал победителем индивидуальной гонки на Олимпийских играх в Пекине.
                     </p>
                 </a>
-            </div>-->
+            </div>
         </div>
     </div>
 </div>
-</body>

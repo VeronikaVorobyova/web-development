@@ -2,7 +2,7 @@
 $database = require_once('./data/database.php');
 
 // Подключение к БД
-$link = mysqli_connect($database['host'], $database['user'],
+$link = new mysqli($database['host'], $database['user'],
     $database['password'], $database['db_name']);
 
 if ($link->connect_errno) {

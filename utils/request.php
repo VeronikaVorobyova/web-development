@@ -1,9 +1,11 @@
 <?php
-require_once 'connect.php';
+include 'connect.php';
+
 /**
  * SQL-запрос новости, которая далее будет помещаться в pageNew и blockNews
  */
-
-$count = mysqli_query($link, 'SELECT COUNT(*) as count FROM news');
-
-echo $count;
+$query = 'SELECT COUNT(*) as count FROM news';
+$count = mysqli_query($link, $query);
+$res = $count->fetch_assoc();
+$counter = $res['count'];
+echo $counter;

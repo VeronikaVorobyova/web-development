@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="style/styleAuth.css">
+
 <div id="content">
     <div class="windows">
 
