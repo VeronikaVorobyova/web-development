@@ -1,5 +1,5 @@
 <?php
-include 'connect.php';
+require_once __DIR__ . '/connect.php';
 
 /**
  * SQL-запрос новости, которая далее будет помещаться в pageNew и blockNews
