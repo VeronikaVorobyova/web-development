@@ -1,6 +1,6 @@
 <?php
 
-$database = require_once('/../data/database.php');
+require_once(__DIR__ . '/../data/database.php');
 
 // Подключение к БД
 $link = new mysqli($database['host'], $database['user'],

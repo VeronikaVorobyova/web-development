@@ -1,11 +1,12 @@
 <?php
+
 /**
  * Хранение данных для подключения к БД
  */
 
 $database = [
-    'host'=> 'localhost',
-    'db_name'=>'mysite',
+    'host' => '127.0.0.1',
+    'db_name' => 'mysite',
     'user' => 'root',
-    'password'=>''
+    'password' => ''
 ];
