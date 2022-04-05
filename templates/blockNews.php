@@ -1,9 +1,5 @@
+
 <div id="blockNews">
-    <?php
-
-
-
-    ?>
     <!--<div id="news1">
         <div id="data1">
             <p>

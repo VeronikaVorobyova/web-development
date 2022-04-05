@@ -40,16 +40,7 @@ h2 {
     border-radius: 20px;
     background-color: #ffffff;
 }
-#news2 {
-    display: block;
-    position: relative;
-    border: 1px solid #800040;
-    text-align: center;
-    margin: 20px;
-    padding-top: 20px;
-    border-radius: 20px;
-    background-color: #ffffff;
-}
+
 #img {
     height: 30px;
     width: 90px;

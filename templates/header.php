@@ -4,5 +4,6 @@
     <link rel="stylesheet" href="templates/style/mainPage.css">
     <title>Новостной сайт</title>
 </head>
+
 <body>
-    <div id="header" >Новости спорта</div>
+    <div id="header">Новости спорта</div>
