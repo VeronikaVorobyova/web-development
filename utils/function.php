@@ -22,11 +22,8 @@ function showAllNews($link)
 
 function addNews($link, $title, $preview, $full_text, $pic)
 {
-    if ($stmt = $link->prepare("INSERT INTO news(title, preview, full_text, pic)VALUES (:title, :preview, :full_text, :pic)")) {
-        $stmt->bindParam(':title', $title);
-        $stmt->bindParam(':preview', $preview);
-        $stmt->bindParam(':full_text', $full_text);
-        $stmt->bindParam(':pic', $pic);
+    if ($stmt = $link->prepare("INSERT INTO news(title, preview, full_text, pic)VALUES (?, ?, ?, ?)")) {
+        $stmt->bind_param("ssss", $title, $preview, $full_text, $pic);
 
         if ($stmt->execute()) {
             return "Новость добавлена успешно";
