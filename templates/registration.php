@@ -3,7 +3,7 @@
 <div id="content">
     <div class="windows">
 
-        <p class="reg-text">Вход</p>
+        <p class="reg-text">Регистрация</p>
         <p>
             <input type="text" placeholder="Введите email"> </input>
             <br>
@@ -11,7 +11,7 @@
         </p>
         <form>
             <button>
-                <p class="buttomtext">Войти
+                <p class="buttomtext">Зарегистрироваться
             </button>
         </form>
     </div>

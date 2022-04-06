@@ -7,10 +7,8 @@ $result = showAllNews($link);
 
 
 <div id="container">
-    <div id="sidebar">
-        <p><a href="/templates/auth.php">Войти в систему</a></p>
-        <p><a href="/templates/about.php">О сайте</a></p>
-    </div>
+
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . "/templates/sidebar.php" ?>
 
     <div id="content">
         <?php while ($row = $result->fetch_assoc()) {
