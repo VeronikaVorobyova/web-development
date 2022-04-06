@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="style/styleAuth.css">
+<link rel="stylesheet" href="/templates/style/styleAuth.css">
 
 <div id="content">
     <div class="windows">

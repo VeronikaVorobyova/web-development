@@ -10,7 +10,7 @@ function countNews($link)
 
 function showAllNews($link)
 {
-    $result = $link->query("SELECT * FROM news");
+    $result = $link->query("SELECT * FROM news ORDER BY data DESC");
     return $result;
 }
 

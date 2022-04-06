@@ -9,7 +9,7 @@ $row = pickOneNew($link, $id);
 
 <div id="container">
 
-    <?php require_once __DIR__ . "/header.php" ?>
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . "/templates/header.php" ?>
 
     <div id="news1">
         <div id="data">
@@ -20,12 +20,12 @@ $row = pickOneNew($link, $id);
         <h1 class="news">
             <?php echo $row['title'] ?>
         </h1>
-        <img src=<?php echo (__DIR__ . $row['pic']) ?> style="width: 80%" alt="" />
+        <img src=<?php echo $row['pic'] ?> style="width: 80%" alt="" />
         <p>
             <?php echo $row['full_text'] ?>
         </p>
     </div>
 
     <?php
-    require_once __DIR__ . "/footer.php"
+    require_once $_SERVER['DOCUMENT_ROOT'] . "/templates/footer.php"
     ?>

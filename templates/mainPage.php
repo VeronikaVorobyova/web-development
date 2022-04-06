@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . "/../utils/function.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/utils/function.php";
 
 $count = countNews($link);
 $result = showAllNews($link);
@@ -8,8 +8,8 @@ $result = showAllNews($link);
 
 <div id="container">
     <div id="sidebar">
-        <p><a href="../auth/auth.php">Войти в систему</a></p>
-        <p><a href="../data/static/about.php">О сайте</a></p>
+        <p><a href="/templates/auth.php">Войти в систему</a></p>
+        <p><a href="/templates/about.php">О сайте</a></p>
     </div>
 
     <div id="content">
@@ -32,6 +32,6 @@ $result = showAllNews($link);
             </a>
         </div>
         <?php }; ?>
-    </div> 
+    </div>
 
 </div>
