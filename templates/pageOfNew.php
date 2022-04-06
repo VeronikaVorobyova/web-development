@@ -1,7 +1,7 @@
 <?php
 
-require_once __DIR__ . "/../utils/connect.php";
-require_once __DIR__ . "/../utils/function.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/utils/connect.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/utils/function.php";
 
 $id = $_GET["id"];
 $row = pickOneNew($link, $id);
@@ -14,15 +14,15 @@ $row = pickOneNew($link, $id);
     <div id="news1">
         <div id="data">
             <p>
-                <?= $row['data'] ?>
+                <?php echo $row['data'] ?>
             </p>
         </div>
         <h1 class="news">
-            <?= $row['title'] ?>
+            <?php echo $row['title'] ?>
         </h1>
-        <img src=<?= $row['pic'] ?> style="width: 80%" alt="" />
+        <img src=<?php echo (__DIR__ . $row['pic']) ?> style="width: 80%" alt="" />
         <p>
-            <?= $row['full_text'] ?>
+            <?php echo $row['full_text'] ?>
         </p>
     </div>
 
