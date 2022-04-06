@@ -1,3 +1,8 @@
+<?php
+session_start();
+require_once $_SERVER['DOCUMENT_ROOT'] . '/utils/connect.php';
+?>
+
 <head>
     <link rel="stylesheet" href="/templates/style/header.css">
     <link rel=" stylesheet" href="/templates/style/footer.css">

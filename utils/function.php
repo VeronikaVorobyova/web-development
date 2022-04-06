@@ -66,3 +66,7 @@ function update($link, $id, $title, $preview, $full_text, $image)
     } else
         return "Запрос не был сформирован";
 }
+
+function registration($link, $login, $password)
+{
+}
