@@ -1,14 +1,8 @@
 <?php
 
-function request($link, string $req)
-{
-    $result = $link->query($req);
-    return $result;
-}
-
 function countNews($link)
 {
-    $obj = request($link, "SELECT COUNT(*) AS count FROM news");
+    $obj = $link->query("SELECT COUNT(*) AS count FROM news");
     $res = $obj->fetch_assoc();
     $count = $res['count'];
     return $count;
@@ -16,8 +10,19 @@ function countNews($link)
 
 function showAllNews($link)
 {
-    $result = request($link, "SELECT * FROM news");
+    $result = $link->query("SELECT * FROM news");
     return $result;
+}
+
+function pickOneNew($link, $id)
+{
+    $stmt = $link->prepare("SELECT * FROM news WHERE id = ?");
+    $stmt->bind_param("i", $id);
+    if ($stmt->execute()) {
+        return $stmt->get_result()->fetch_assoc();
+    } else {
+        return "Такой новости не существует";
+    }
 }
 
 function addNews($link, $title, $preview, $full_text, $pic)
@@ -33,4 +38,31 @@ function addNews($link, $title, $preview, $full_text, $pic)
     } else {
         return "Что-то пошло не так";
     }
+}
+
+function deleteNew($link, $id)
+{
+    $stmt = $link->prepare("DELETE FROM news WHERE news.id = ?");
+    $stmt->bind_param("s", $id);
+
+    if ($stmt->execute()) {
+        return "Новость удалена";
+    } else {
+        "Новость не удалена: что-то пошло не так";
+    }
+}
+
+function update($link, $id, $title, $preview, $full_text, $image)
+{
+
+    if ($stmt = $link->prepare("UPDATE news SET title=?, date=?, preview=?, full_text=?, image=? WHERE id=?")) {
+
+        $stmt->bind_param("ssssi", $title, $preview, $full_text, $image, $id);
+
+        if ($stmt->execute())
+            return "Новость успешно обновлена";
+        else
+            return "Новость не была обновлена";
+    } else
+        return "Запрос не был сформирован";
 }
