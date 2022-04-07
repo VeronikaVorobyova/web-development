@@ -70,3 +70,7 @@ function update($link, $id, $title, $preview, $full_text, $image)
 function registration($link, $login, $password)
 {
 }
+
+function auth($link, $login, $password)
+{
+}

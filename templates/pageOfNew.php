@@ -8,10 +8,10 @@ $row = pickOneNew($link, $id);
 ?>
 
 <div id="container">
-
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . "/templates/header.php" ?>
-
+    <?php require_once $_SERVER['DOCUMENT_ROOT'] . "/templates/sidebar.php" ?>
     <div id="news1">
+
         <div id="data">
             <p>
                 <?php echo $row['data'] ?>

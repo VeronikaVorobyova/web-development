@@ -1,28 +1,8 @@
-<!-- <link rel="stylesheet" href="/templates/style/styleAuth.css">
-
-<div id="content">
-    <div class="windows">
-
-        <p class="reg-text">Регистрация</p>
-        <p>
-            <input type="text" placeholder="Введите email"> </input>
-            <br>
-            <input type="text" placeholder="Введите пароль"> </input>
-        </p>
-        <form>
-            <button>
-                <p class="buttomtext">Зарегистрироваться
-            </button>
-        </form>
-    </div>
-</div> -->
-
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . "/templates/header.php";
 require_once $_SERVER['DOCUMENT_ROOT'] . "/utils/function.php";
-
-// $ans=registr($conn);
 ?>
+
 <main class="content">
     <?php if (empty($_SESSION['login']) or empty($_SESSION['id'])) {
     ?>
@@ -46,7 +26,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/utils/function.php";
                 <div class="button">
                     <span class="error">
                         <?php
-                            if (isset($_REQUEST['action'])) $w = $_REQUEST['action'];
+                            if (isset($_REQUEST['action']))
+                                $w = $_REQUEST['action'];
                             else
                                 $w = "error";
                             if ($w == "reg") {
@@ -58,7 +39,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/utils/function.php";
                                 print_r($user);
                             } ?>
                     </span>
-                    <input class="c-button" type="submit" value="Зарегестироваться"></input>
+                    <input class="c-button" type="submit" value="Зарегистрироваться"></input>
                 </div>
             </form>
         </div>
