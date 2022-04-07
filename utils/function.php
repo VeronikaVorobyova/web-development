@@ -69,8 +69,59 @@ function update($link, $id, $title, $preview, $full_text, $image)
 
 function registration($link, $login, $password)
 {
+    $stmt = $link->prepare(
+        "SELECT * FROM users WHERE login=? and password=?"
+    );
+    $stmt->bind_param("ss", $login, $password);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+
+    $myrow = mysqli_fetch_array($result);
+    if ($myrow == NULL) {
+
+        $stmt = $link->prepare("INSERT INTO users (login, password, admin) VALUES( ?, ?, ?)");
+
+        $admin = 0;
+        $stmt->bind_param("sss", $login, $password, $admin);
+        $stmt->execute();
+
+        $_SESSION['login'] = $login;
+        $_SESSION['admin'] = $admin;
+
+        header("Location: http://localhost/index.php");
+    } else {
+        return "Пользователь $login уже зарегистрирован";
+        exit;
+    }
 }
 
 function auth($link, $login, $password)
 {
+    $stmt = $link->prepare("SELECT * FROM users WHERE login=?");
+    $stmt->bind_param("s", $login);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+    $myrow = $result->fetch_assoc();
+
+    if (empty($myrow['login'])) {
+
+        return "Введен некорректный логин или пароль";
+        exit;
+    } else {
+
+        if ($password == $myrow['password']) {
+
+            $_SESSION['login'] = $myrow['login'];
+            $_SESSION['id'] = $myrow['id'];
+            $_SESSION['admin'] = $myrow['admin'];
+
+            header("Location: http://localhost/index.php");
+        } else {
+
+            return "Введен некорректный логин или пароль";
+            exit;
+        }
+    }
 }

@@ -8,7 +8,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/utils/function.php";
     ?>
     <div class="login-form">
         <div class="news">
-            <form action="registration.php?action=auth" method="POST">
+            <form action="auth.php?action=auth" method="POST">
                 <table cellspacing="25" class="maket">
                     <tr>
                         <td class="loginform">Логин: </td>
@@ -32,7 +32,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/utils/function.php";
                                 $w = "error";
                             if ($w == "auth") {
                                 $user = auth(
-                                    $conn,
+                                    $link,
                                     $_POST['login'],
                                     $_POST['password']
                                 );
@@ -44,7 +44,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/utils/function.php";
             </form>
         </div>
     </div>
-    <?php } else header("Location: index.php"); ?>
+    <?php } else header("Location: http://localhost/index.php"); ?>
 </main>
 
 <?php require_once("footer.php"); ?>

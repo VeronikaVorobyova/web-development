@@ -32,7 +32,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/utils/function.php";
                                 $w = "error";
                             if ($w == "reg") {
                                 $user = registration(
-                                    $conn,
+                                    $link,
                                     $_POST['login'],
                                     $_POST['password']
                                 );
@@ -44,7 +44,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/utils/function.php";
             </form>
         </div>
     </div>
-    <?php } else header("Location: index.php"); ?>
+    <?php } else header("Location: http://localhost/index.php"); ?>
 </main>
 
 <?php require_once("footer.php"); ?>
