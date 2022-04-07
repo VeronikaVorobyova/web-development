@@ -1,4 +1,4 @@
-<?php session_start(); /// Уничтожаем переменные в сессиях 
+<?php
 
 unset($_SESSION['password']);
 unset($_SESSION['login']);

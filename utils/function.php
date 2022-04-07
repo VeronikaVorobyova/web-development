@@ -25,7 +25,7 @@ function pickOneNew($link, $id)
     }
 }
 
-function addNews($link, $title, $preview, $full_text, $pic)
+function addNew($link, $title, $preview, $full_text, $pic)
 {
     if ($stmt = $link->prepare("INSERT INTO news(title, preview, full_text, pic)VALUES (?, ?, ?, ?)")) {
         $stmt->bind_param("ssss", $title, $preview, $full_text, $pic);
@@ -52,7 +52,7 @@ function deleteNew($link, $id)
     }
 }
 
-function update($link, $id, $title, $preview, $full_text, $image)
+function edit($link, $id, $title, $preview, $full_text, $image)
 {
 
     if ($stmt = $link->prepare("UPDATE news SET title=?, date=?, preview=?, full_text=?, image=? WHERE id=?")) {
