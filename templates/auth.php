@@ -26,8 +26,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/utils/function.php";
                 <div class="button">
                     <span class="error">
                         <?php
-                            if (isset($_REQUEST['action']))
-                                $w = $_REQUEST['action'];
+                            if (isset($_GET['action']))
+                                $w = $_GET['action'];
                             else
                                 $w = "error";
                             if ($w == "auth") {

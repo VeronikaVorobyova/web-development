@@ -36,6 +36,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/utils/function.php";
                                     $_POST['login'],
                                     $_POST['password']
                                 );
+                                $user = auth(
+                                    $link,
+                                    $_POST['login'],
+                                    $_POST['password']
+                                );
                                 print_r($user);
                             } ?>
                     </span>

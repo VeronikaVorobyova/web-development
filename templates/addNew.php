@@ -9,7 +9,7 @@ $id = $_GET['id'];
 <main class="content">
     <div class="block-news">
         <div class="news">
-            <form enctype="multipart/form-data" action="addNew.php?action=<?= $act ?>" method="POST">
+            <form enctype="multipart/form-data" action="addNew.php?action=<?= $act ?>&id=<?= $id ?>" method="POST">
                 <table cellspacing="25" class="maket">
                     <tr>
                         <td class="leftcol">Заголовок</td>
@@ -37,39 +37,58 @@ $id = $_GET['id'];
                             </input>
                         </td>
                     </tr>
+
                 </table>
                 <div class="button">
+                    <input class="c-button" type="submit" name="confirm" value="Выполнить">
                     <span class="error">
                         <?php
+                        if (isset($_POST['confirm'])) {
 
-                        if (isset($_REQUEST['action']))
-                            $w = $_REQUEST['action'];
-                        else
-                            $w = "error";
-                        if ($w == "add") {
-                            $user = addNew(
-                                $link,
-                                $_POST['title'],
-                                $_POST['preview'],
-                                $_POST['full_text'],
-                                $_POST['pic'],
-                            );
-                            print_r($user);
-                        }
-                        if ($w == "edit") {
-                            $user = editNew(
-                                $link,
-                                $id,
-                                $_POST['title'],
-                                $_POST['preview'],
-                                $_POST['full_text'],
-                                $_POST['pic'],
-                            );
-                            print_r($user);
+                            if (isset($_GET['action']))
+                                $w = $_GET['action'];
+                            else
+                                $w = "error";
+                            if ($w == "add") {
+
+                                $title = $_POST['title'];
+                                $preview = $_POST['preview'];
+                                $full_text = $_POST['full_text'];
+                                $pic = $_POST['pic'];
+
+                                $user = addNew(
+                                    $link,
+                                    $title,
+                                    $preview,
+                                    $full_text,
+                                    $pic
+                                );
+                                print_r($user);
+                                sleep(1);
+                                header("Location: http://localhost/index.php");
+                            }
+                            if ($w == "edit") {
+
+                                $title = $_POST['title'];
+                                $preview = $_POST['preview'];
+                                $full_text = $_POST['full_text'];
+                                $pic = $_POST['pic'];
+
+                                $user = editNew(
+                                    $link,
+                                    $id,
+                                    $title,
+                                    $preview,
+                                    $full_text,
+                                    $pic
+                                );
+                                print_r($user);
+                                sleep(1);
+                                header("Location: http://localhost/index.php");
+                            }
                         }
                         ?>
                     </span>
-                    <input class="c-button" type="submit" value="Выполнить">
                 </div>
             </form>
         </div>

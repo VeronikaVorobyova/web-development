@@ -11,7 +11,6 @@ $row = pickOneNew($link, $id);
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . "/templates/header.php" ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . "/templates/sidebarOfNew.php" ?>
     <div id="news1">
-
         <div id="data">
             <p>
                 <?php echo $row['data'] ?>

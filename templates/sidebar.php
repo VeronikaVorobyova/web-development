@@ -6,7 +6,7 @@
 
         <?php } else if ($_SESSION['admin'] == 1) { ?>
 
-    <li><a href="/templates/addNew.php?action=add">Добавить новость</a></li>
+    <li><a href="/templates/addNew.php?action=add&id=0">Добавить новость</a></li>
     <li><a href="/utils/logout.php">Выйти</a></li>
 
     <?php } else { ?>

@@ -19,7 +19,7 @@ h2 {
     float: left; /* Обтекание по правому краю */
 }
 #content {
-    margin-left: 130px; /* Отступ слева */
+    margin-left: 400px; /* Отступ слева */
     padding: 10px; /* Поля вокруг текста */
     background: #fff; /* Цвет фона правой колонки */
 }
@@ -31,11 +31,11 @@ h2 {
 }
 
 #news1 {
-    display: block;
+    display: flex;
     position: relative;
     border: 1px solid #800040;
     text-align: center;
-    margin: 20px;
+    margin: 20px 30px;
     padding-top: 20px;
     border-radius: 20px;
     background-color: #ffffff;
