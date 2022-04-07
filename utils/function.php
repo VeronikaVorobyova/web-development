@@ -52,10 +52,10 @@ function deleteNew($link, $id)
     }
 }
 
-function edit($link, $id, $title, $preview, $full_text, $image)
+function editNew($link, $id, $title, $preview, $full_text, $image)
 {
 
-    if ($stmt = $link->prepare("UPDATE news SET title=?, date=?, preview=?, full_text=?, image=? WHERE id=?")) {
+    if ($stmt = $link->prepare("UPDATE news SET title=?, preview=?, full_text=?, pic=? WHERE id=?")) {
 
         $stmt->bind_param("ssssi", $title, $preview, $full_text, $image, $id);
 
