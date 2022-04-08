@@ -1,0 +1,54 @@
+body {
+    font: 10pt Arial, Helvetica, sans-serif; /* Шрифт на веб-странице */
+    background: #fff; /* Цвет фона */
+}
+
+
+.content {
+    padding: 10px; /* Поля вокруг текста */
+    background: #fff; /* Цвет фона правой колонки */
+}
+
+#table{
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+
+
+
+
+textarea{
+    display: block;
+    margin-top: 5%;
+    margin-left: 20px;
+    height: 30px;
+    width: 300px;
+}
+
+#preview{
+    height: 120px;
+}
+
+#fulltext{
+    height: 250px;
+}
+
+button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    
+}
+input{
+    
+    margin-top: 1.5px;
+    text-align: center;
+    font: normal 16px "Arial";
+    color: #0b0a0a;
+}
+
+
+
