@@ -43,8 +43,8 @@ $id = $_GET['id'];
                     </tr>
 
                 </table>
-                <button>
-                    <input class="buttontext" type="submit" name="confirm" value="">Отправить
+                
+                    <button class="buttontext" type="submit" name="confirm" value="">Отправить
                     <span class="error">
                         <?php
                         if (isset($_POST['confirm'])) {
