@@ -7,9 +7,10 @@ $id = $_GET["id"];
 $row = pickOneNew($link, $id);
 ?>
 
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . "/templates/header.php" ?>
 <div id="container">
-    <?php require_once $_SERVER['DOCUMENT_ROOT'] . "/templates/header.php" ?>
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . "/templates/sidebarOfNew.php" ?>
+
     <div id="news1">
         <div id="data">
             <p>
@@ -19,12 +20,12 @@ $row = pickOneNew($link, $id);
         <h1 class="news">
             <?php echo $row['title'] ?>
         </h1>
-        <img src=<?php echo $row['pic'] ?> style="width: 80%" alt="" />
+        <img class="big-picture" src=<?php echo $row['pic'] ?> alt="" />
         <p>
             <?php echo $row['full_text'] ?>
         </p>
     </div>
-
-    <?php
-    require_once $_SERVER['DOCUMENT_ROOT'] . "/templates/footer.php"
-    ?>
+</div>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . "/templates/footer.php"
+?>
