@@ -7,7 +7,7 @@
 * Licensed under MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
 */
 .slider {
-    width: auto;
+    width: 1684px;
     position: relative
 }
 
@@ -18,7 +18,7 @@
 .slider__items {
     display: flex;
     transition: transform .5s ease;
-    justify-content: l;
+    justify-content: space-between;
 }
 
 .slider_disable-transition {
