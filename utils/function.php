@@ -89,7 +89,7 @@ function registration($link, $login, $password)
         $_SESSION['login'] = $login;
         $_SESSION['admin'] = $admin;
 
-        header("Location: http://localhost/index.php");
+        header("Location: http://127.0.0.1/index.php");
     } else {
         return "Пользователь $login уже зарегистрирован";
         exit;
@@ -117,7 +117,7 @@ function auth($link, $login, $password)
             $_SESSION['id'] = $myrow['id'];
             $_SESSION['admin'] = $myrow['admin'];
 
-            header("Location: http://localhost/index.php");
+            header("Location: http://127.0.0.1/index.php");
         } else {
 
             return "Введен некорректный логин или пароль";
