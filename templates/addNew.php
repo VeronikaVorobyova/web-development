@@ -1,4 +1,4 @@
-<head> 
+<head>
     <link rel="stylesheet" href="/templates/style/addNew.css">
 </head>
 <?php
@@ -14,7 +14,7 @@ $id = $_GET['id'];
     <div class="block-news">
         <div class="news">
             <form enctype="multipart/form-data" action="addNew.php?action=<?= $act ?>&id=<?= $id ?>" method="POST">
-            <table cellspacing="25" class="maket">
+                <table cellspacing="25" class="maket">
                     <tr>
                         <td class="leftcol">Заголовок новости</td>
                         <td class="rightcol"> <input required type="text" name="title">
@@ -30,7 +30,7 @@ $id = $_GET['id'];
                     </tr>
                     <tr>
                         <td class="leftcol">Текст новости</td>
-                        <td class="rightcol"> <textarea required name="full_text" id="fulltext"  type="text">
+                        <td class="rightcol"> <textarea required name="full_text" id="fulltext" type="text">
                             </textarea>
                         </td>
                     </tr>
@@ -43,8 +43,8 @@ $id = $_GET['id'];
                     </tr>
 
                 </table>
-                
-                    <button class="buttontext" type="submit" name="confirm" value="">Отправить
+
+                <button class="buttontext" type="submit" name="confirm" value="">Отправить
                     <span class="error">
                         <?php
                         if (isset($_POST['confirm'])) {
@@ -69,7 +69,7 @@ $id = $_GET['id'];
                                 );
                                 print_r($user);
                                 sleep(1);
-                                header("Location: http://localhost/index.php");
+                                header("Location: http://127.0.0.1/index.php");
                             }
                             if ($w == "edit") {
 
@@ -88,7 +88,7 @@ $id = $_GET['id'];
                                 );
                                 print_r($user);
                                 sleep(1);
-                                header("Location: http://localhost/index.php");
+                                header("Location: http://127.0.0.1/index.php");
                             }
                         }
                         ?>
