@@ -83,7 +83,8 @@ function registration($link, $login, $password)
         $stmt = $link->prepare("INSERT INTO users (login, password, admin) VALUES( ?, ?, ?)");
 
         $admin = 0;
-        $stmt->bind_param("sss", $login, $password, $admin);
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+        $stmt->bind_param("sss", $login, $hash, $admin);
         $stmt->execute();
 
         $_SESSION['login'] = $login;
@@ -111,7 +112,7 @@ function auth($link, $login, $password)
         exit;
     } else {
 
-        if ($password == $myrow['password']) {
+        if (password_verify($password, $myrow['password'])) {
 
             $_SESSION['login'] = $myrow['login'];
             $_SESSION['id'] = $myrow['id'];
