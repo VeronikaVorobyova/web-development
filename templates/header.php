@@ -4,8 +4,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/utils/connect.php';
 ?>
 
 <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="/templates/style/header.css">
-    <link rel=" stylesheet" href="/templates/style/footer.css">
+    <link rel="stylesheet" href="/templates/style/footer.css">
     <link rel="stylesheet" href="/templates/style/mainPage.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Новостной сайт</title>
@@ -15,11 +16,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/utils/connect.php';
     <script defer src="/templates/slider/chief-slider.min.js"></script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const slider = new ChiefSlider('.slider', {
-                loop: false
-            });
+    document.addEventListener('DOMContentLoaded', function() {
+        const slider = new ChiefSlider('.slider', {
+            loop: false
         });
+    });
     </script>
 </head>
 
