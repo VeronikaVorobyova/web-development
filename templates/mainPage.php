@@ -45,3 +45,4 @@ $result = showAllNews($link);
             </ol>
         </div>
     </div>
+</div>
