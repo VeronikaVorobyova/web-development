@@ -13,7 +13,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/utils/function.php";
             <form action="auth.php?action=auth" method="POST">
                 <div id="content">
                     <div class="windows">
-
                         <p class="regtext">Вход</p>
                         <p>
                             <input required type="text" name="login" placeholder="Введите логин"> </input>
