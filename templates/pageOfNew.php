@@ -10,20 +10,21 @@ $row = pickOneNew($link, $id);
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . "/templates/header.php" ?>
 <div id="container">
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . "/templates/sidebarOfNew.php" ?>
-
-    <div id="news1">
-        <div id="data">
+    <div id="content">
+        <div id="news1">
+            <div id="data">
+                <p>
+                    <?php echo $row['data'] ?>
+                </p>
+            </div>
+            <h1 class="news">
+                <?php echo $row['title'] ?>
+            </h1>
+            <img class="big-picture" src=<?php echo $row['pic'] ?> alt="" />
             <p>
-                <?php echo $row['data'] ?>
+                <?php echo $row['full_text'] ?>
             </p>
         </div>
-        <h1 class="news">
-            <?php echo $row['title'] ?>
-        </h1>
-        <img class="big-picture" src=<?php echo $row['pic'] ?> alt="" />
-        <p>
-            <?php echo $row['full_text'] ?>
-        </p>
     </div>
 </div>
 <?php
