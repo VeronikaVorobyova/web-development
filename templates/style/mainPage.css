@@ -70,6 +70,17 @@ h2 {
     height: auto;
 }
 
+#big_new {
+    display: flex;
+    border: 1px solid #800040;
+    text-align: center;
+    margin: 20px 30px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    flex-direction: column;
+}
+
 #img {
     width: 250px;
     height: auto;

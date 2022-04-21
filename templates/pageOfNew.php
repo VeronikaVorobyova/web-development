@@ -11,7 +11,7 @@ $row = pickOneNew($link, $id);
 <div id="container">
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . "/templates/sidebarOfNew.php" ?>
     <div id="content">
-        <div id="news1">
+        <div id="big_new">
             <div id="data">
                 <p>
                     <?php echo $row['data'] ?>
