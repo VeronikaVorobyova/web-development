@@ -16,7 +16,8 @@
 
 .slider__items {
     display: flex;
-    transition: transform .5s ease
+    transition: transform .5s ease;
+    justify-content: left;
 }
 
 .slider_disable-transition {
