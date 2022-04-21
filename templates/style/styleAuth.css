@@ -1,22 +1,40 @@
 body {
-    font: 10pt Arial, Helvetica, sans-serif; /* Шрифт на веб-странице */
-    background: #e1dfb9; /* Цвет фона */
+    font: 10pt Arial, Helvetica, sans-serif;
+    /* Шрифт на веб-странице */
+    background: #e1dfb9;
+    /* Цвет фона */
 }
 
-.news{
-    height: 500px;
-    padding: 10px; /* Поля вокруг текста */
-    background: #fff; /* Цвет фона правой колонки */
+h2 {
+    font-size: 1.1em;
+    /* Размер шрифта */
+    color: #800040;
+    /* Цвет текста */
+    margin-top: 0;
+    /* Отступ сверху */
+}
+
+#content {
+    padding: 10px;
+    /* Поля вокруг текста */
+    background: #fff;
+    /* Цвет фона правой колонки */
+}
+
+.big {
+    width: 250px;
+    height: 250px;
 }
 
 .windows {
     display: block;
-    margin-left: 34%;
-    margin-right: 66%;
+    margin-left: auto;
+    margin-right: auto;
     flex-direction: column;
     text-align: center;
     height: 350px;
     width: 250px;
+    padding: 10px;
     border-radius: 25px;
     background-color: #ffffff;
     text-decoration: none;
@@ -24,14 +42,14 @@ body {
     border: 1px solid #000000;
 }
 
-.regtext{
+.regtext {
     display: block;
     margin-top: 30px;
     font: normal 26px "Arial";
     margin-bottom: 50px;
 }
 
-input{
+input {
     display: block;
     margin-top: 5%;
     margin-left: auto;
@@ -40,7 +58,7 @@ input{
     width: 180px;
 }
 
-button{
+button {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -50,7 +68,8 @@ button{
     background-color: #8fa09b;
     border-radius: 25px
 }
-.buttontext{
+
+.buttomtext {
     margin-top: 1.5px;
     text-align: center;
     font: normal 16px "Arial";

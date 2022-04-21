@@ -1,27 +1,19 @@
 body {
     font: 10pt Arial, Helvetica, sans-serif;
-    /* Шрифт на веб-странице */
     background: #e1dfb9;
-    /* Цвет фона */
 }
 
 h2 {
     font-size: 1.1em;
-    /* Размер шрифта */
     color: #800040;
-    /* Цвет текста */
     margin-top: 0;
-    /* Отступ сверху */
 }
 
 #container {
     width: 100%;
-    /* Ширина слоя */
     height: auto;
     margin: 0 auto;
-    /* Выравнивание по центру */
     background: #f0f0f0;
-    /* Цвет фона левой колонки */
     flex-grow: 0;
     display: flex;
     flex-direction: row;
@@ -29,32 +21,35 @@ h2 {
 }
 
 #sidebar {
-    /* margin-top: 10px; */
-    width: auto;
-    /* Ширина слоя */
+    width: 200px;
     height: 100%;
     display: flex;
     padding: 0 10px;
-    /* Отступы вокруг текста */
     float: left;
-    /* Обтекание по правому краю */
     height: auto;
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: center;
-    justify-content: center;
+    justify-content: flex-start;
+    background: #f0f0f0;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+#sidebar a {
+    margin-top: 5px;
 }
 
 #content {
     /* margin-left: 400px; */
-    /* Отступ слева */
     /* padding: 10px; */
-    /* Поля вокруг текста */
     background: #fff;
-    /* Цвет фона правой колонки */
     display: flex;
     margin: auto;
+    flex-shrink: 2;
     /* flex-grow: 0; */
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 #blockNews {
@@ -64,24 +59,22 @@ h2 {
 
 #news1 {
     display: flex;
-    position: relative;
     border: 1px solid #800040;
     text-align: center;
     margin: 20px 30px;
-    padding-top: 20px;
+    padding: 20px;
     border-radius: 20px;
     background-color: #ffffff;
     flex-direction: column;
 }
 
 #img {
-    height: 30px;
-    width: 90px;
+    width: 250px;
+    height: auto;
 }
 
 .big-picture {
     margin-left: auto;
     margin-right: auto;
-    height: 50%;
-    width: 50%;
+    width: 600px;
 }
