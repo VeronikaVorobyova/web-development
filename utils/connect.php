@@ -10,6 +10,8 @@ $link = new mysqli(
     $database['db_name']
 );
 
+mysqli_set_charset($link, "utf8");
+
 if ($link->connect_errno) {
     echo "Не удалось подключиться к MySQL: (" . $link->connect_errno . ") ";
 }

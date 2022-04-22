@@ -7,4 +7,4 @@ $id = $_GET['id'];
 
 deleteNew($link, $id);
 
-header("Location: http://localhost/index.php");
+header("Location: http://127.0.0.1/index.php");

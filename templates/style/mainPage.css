@@ -1,72 +1,95 @@
 body {
-    font: 10pt Arial, Helvetica, sans-serif; /* Шрифт на веб-странице */
-    background: #e1dfb9; /* Цвет фона */
+    font: 10pt Arial, Helvetica, sans-serif;
+    background: #e1dfb9;
 }
+
 h2 {
-    font-size: 1.1em; /* Размер шрифта */
-    color: #800040; /* Цвет текста */
-    margin-top: 0; /* Отступ сверху */
+    font-size: 1.1em;
+    color: #800040;
+    margin-top: 0;
 }
+
 #container {
-    width: 100%; /* Ширина слоя */
-    height: 100%;
-    margin: 0 auto; /* Выравнивание по центру */
-    background: #f0f0f0; /* Цвет фона левой колонки */
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background: #f0f0f0;
+    display: flex;
+    flex-grow: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
-#header {
-    font-size: 2.2em; /* Размер текста */
-    text-align: center; /* Выравнивание по центру */
-    padding: 5px; /* Отступы вокруг текста */
-    background: #8fa09b; /* Цвет фона шапки */
-    color: #ffe; /* Цвет текста */
-}
+
 #sidebar {
-    margin-top: 10px;
-    width: 150px; /* Ширина слоя */
-    height: 95%;
-    padding: 0 10px; /* Отступы вокруг текста */
-    float: left; /* Обтекание по правому краю */
-    line-height: 3;
-}
-#content {
+    width: 200px;
     height: 100%;
-    margin-left: 170px; /* Отступ слева */
-    padding: 10px; /* Поля вокруг текста */
-    background: #fff; /* Цвет фона правой колонки */
-    
-}
-#footer {
-    background: #8fa09b; /* Цвет фона подвала */
-    color: #fff; /* Цвет текста */
-    padding: 5px; /* Отступы вокруг текста */
-    clear: left; /* Отменяем действие float */
-    
-}
-
-#data {
-    position: relative;
-    text-align: center;
+    display: flex;
+    padding: 0 10px;
+    float: left;
+    height: auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    background: #f0f0f0;
+    align-items: center;
+    flex-shrink: 0;
 }
 
-.news {
-    display: block;
-    text-align: center;
+#sidebar a {
+    margin-top: 5px;
+}
+
+#content {
+    /* margin-left: 400px; */
+    /* padding: 10px; */
+    background: #fff;
+    display: flex;
+    margin: auto;
+    flex-shrink: 2;
+    /* flex-grow: 0; */
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#blockNews {
+    display: flex;
+    height: 100%;
 }
 
 #news1 {
-    height: 60%;
-    width: 50%;
-    display: block;
-    position: relative;
+    display: flex;
     border: 1px solid #800040;
     text-align: center;
-    margin: 20px;
-    padding-top: 20px;
+    margin: 20px 10px;
+    padding: 20px;
     border-radius: 20px;
     background-color: #ffffff;
+    flex-direction: column;
+    width: 250px;
+    height: 300px;
+
+}
+
+#big_new {
+    display: flex;
+    border: 1px solid #800040;
+    text-align: center;
+    margin: 20px 30px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    flex-direction: column;
+    
 }
 
 #img {
-    width: 70%;
-    text-align: center;
+    width: 250px;
+    height: auto;
+}
+
+.big-picture {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
 }

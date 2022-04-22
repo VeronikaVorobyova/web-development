@@ -83,13 +83,14 @@ function registration($link, $login, $password)
         $stmt = $link->prepare("INSERT INTO users (login, password, admin) VALUES( ?, ?, ?)");
 
         $admin = 0;
-        $stmt->bind_param("sss", $login, $password, $admin);
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+        $stmt->bind_param("sss", $login, $hash, $admin);
         $stmt->execute();
 
         $_SESSION['login'] = $login;
         $_SESSION['admin'] = $admin;
 
-        header("Location: http://localhost/index.php");
+        header("Location: http://127.0.0.1/index.php");
     } else {
         return "Пользователь $login уже зарегистрирован";
         exit;
@@ -111,13 +112,13 @@ function auth($link, $login, $password)
         exit;
     } else {
 
-        if ($password == $myrow['password']) {
+        if (password_verify($password, $myrow['password'])) {
 
             $_SESSION['login'] = $myrow['login'];
             $_SESSION['id'] = $myrow['id'];
             $_SESSION['admin'] = $myrow['admin'];
 
-            header("Location: http://localhost/index.php");
+            header("Location: http://127.0.0.1/index.php");
         } else {
 
             return "Введен некорректный логин или пароль";
