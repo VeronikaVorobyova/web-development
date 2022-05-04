@@ -9,6 +9,12 @@ h2 {
     margin-top: 0;
 }
 
+h3{
+    font-size:35px;
+    color:#fff!important;
+    text-shadow: 2px 2px 2px #000;
+}
+
 #container {
     width: 100%;
     height: auto;
