@@ -17,9 +17,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/utils/function.php";
 
                             <p class="regtext">Регистрация</p>
                             <p>
-                                <input required type="text" name="login" placeholder="Введите логин"> </input>
-                                <br>
-                                <input required type="text" name="password" placeholder="Введите пароль"> </input>
+                            <label for="inputEmail4" class="form-label"></label>
+                            <input required type="text" name="login" class="form-control" id="inputEmail4" placeholder="Введите логин"> </input>
+                            <br>
+                            <label for="inputPassword4" class="form-label"></label>
+                            <input required type="text" name="password" class="form-control" id="inputPassword4" placeholder="Введите пароль"> </input>
                             </p>
 
                             <div class="button">
@@ -43,8 +45,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/utils/function.php";
                                         print_r($user);
                                     } ?>
                                 </span>
-                                <button>
-                                    <p class="buttontext" type="submit" value="">Поехали!
+                                <button type="submit" class="btn btn-outline-primary">
+                                    Поехали!
                                 </button>
                             </div>
                 </form>

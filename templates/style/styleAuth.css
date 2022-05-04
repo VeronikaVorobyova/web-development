@@ -17,14 +17,11 @@ h2 {
 #content {
     padding: 10px;
     /* Поля вокруг текста */
-    background: #fff;
+    /* background: rgb(255, 255, 255); */
     /* Цвет фона правой колонки */
 }
 
-.big {
-    width: 250px;
-    height: 250px;
-}
+
 
 .windows {
     display: block;
@@ -63,15 +60,15 @@ button {
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
-    height: 30px;
+    /* height: 30px;
     width: 95px;
     background-color: #8fa09b;
-    border-radius: 25px
+    border-radius: 25px */
 }
 
-.buttontext {
+/* .buttontext {
     margin-top: 1.5px;
     text-align: center;
     font: normal 16px "Arial";
     color: #ffffff;
-}
+} */

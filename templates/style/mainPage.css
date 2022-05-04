@@ -20,7 +20,7 @@ h2 {
     flex-wrap: nowrap;
 }
 
-#sidebar {
+/* #sidebar {
     width: 200px;
     height: 100%;
     display: flex;
@@ -32,13 +32,13 @@ h2 {
     align-content: center;
     justify-content: flex-start;
     background: #f0f0f0;
-    align-items: center;
+    align-items: center; 
     flex-shrink: 0;
 }
 
 #sidebar a {
     margin-top: 5px;
-}
+} */
 
 #content {
     /* margin-left: 400px; */
@@ -66,8 +66,8 @@ h2 {
     border-radius: 20px;
     background-color: #ffffff;
     flex-direction: column;
-    width: 250px;
-    height: 300px;
+    width: 300px;
+    height: 350px;
 
 }
 
