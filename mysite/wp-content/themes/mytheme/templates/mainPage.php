@@ -88,11 +88,11 @@ $result = showAllNews($link);
                 <div class="info-list">
                     <P> <?php the_time("Y-m-d"); ?> </P>
                 </div>
-                <h4 class="title">
+                <h5 class="title">
                     <a href="<?php the_permalink(); ?>">
                         "<?php the_title(); ?>"
                     </a>
-                </h4>
+                </h5>
                 <!-- <p><?php the_excerpt(); ?></p> -->
                 <img src="<?php the_post_thumbnail_url(); ?>">
                 <a href="<?php the_permalink() ?>" class="article btn btn_outline-primary">
