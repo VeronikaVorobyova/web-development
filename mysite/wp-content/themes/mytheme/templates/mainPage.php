@@ -18,33 +18,32 @@ $result = showAllNews($link);
 
                 <div class="carousel-indicators">
 
-                
                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1"></button>
-                    
+
                     <?php for ($i = 0; $i < $count; $i++) { ?>
                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
                         aria-label="Slide 2"></button>
                     <?php }; ?>
-                    
+
 
                 </div>
 
 
                 <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="10000">
+                    <?php while (have_posts()) : the_post(); ?>
 
-                        <?php $row = $result->fetch_assoc(); ?>
+                    <div class="carousel-item active" data-bs-interval="10000">
 
                         <img id="img" src="<?php the_post_thumbnail_url(); ?>" class="d-block w-100" style="" alt="" />
 
                         <div class="carousel-caption d-none d-md-block">
                             <h3>"<?php the_title(); ?>"</h3>
                         </div>
-
                     </div>
+                    <?php endwhile; ?>
 
-                    <?php for ($i = 0; $i < $count; $i++) { ?>
+                    <!-- <?php for ($i = 0; $i < $count; $i++) { ?>
                     <?php $row = $result->fetch_assoc(); ?>
 
                     <div class="carousel-item" data-bs-interval="2000">
@@ -57,7 +56,7 @@ $result = showAllNews($link);
 
                     </div>
 
-                    <?php }; ?>
+                    <?php }; ?> -->
                 </div>
 
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
@@ -82,23 +81,25 @@ $result = showAllNews($link);
 
         </div>
 
-        
-    <div class="content">
-            <ul class="info-list">
-                <li <?php the_time("Y-m-d"); ?> </li>
-            </ul>
-            <h4 class="title">
-                <a href="<?php the_permalink(); ?>">
-                    "<?php the_title(); ?>"
-                </a>
-            </h4>
-            <p><?php the_excerpt(); ?></p>
-            <img src="<?php the_post_thumbnail_url(); ?>" >
-            <a href="<?php the_permalink(); ?>" class="article btn btn_outline-primary">
-                Читать далее..
-            </a>
-            <br><br>   
-        </div>
-</div>
 
+        <div class="content">
+            <?php while (have_posts()) : the_post(); ?>
+            <div class="smol-new">
+                <div class="info-list">
+                    <P> <?php the_time("Y-m-d"); ?> </P>
+                </div>
+                <h4 class="title">
+                    <a href="<?php the_permalink(); ?>">
+                        "<?php the_title(); ?>"
+                    </a>
+                </h4>
+                <!-- <p><?php the_excerpt(); ?></p> -->
+                <img src="<?php the_post_thumbnail_url(); ?>">
+                <a href="<?php the_permalink() ?>" class="article btn btn_outline-primary">
+                    Читать далее..
+                </a>
+            </div>
+            <?php endwhile; ?>
+        </div>
+    </div>
 </div>
