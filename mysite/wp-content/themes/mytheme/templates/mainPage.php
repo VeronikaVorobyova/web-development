@@ -11,7 +11,7 @@ $result = showAllNews($link);
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . "/mysite/wp-content/themes/mytheme/templates/sidebar.php" ?>
 
     <div class="container-smol">
-
+        <?php if (!is_single()) : ?>
         <div class="galery">
 
             <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
@@ -28,7 +28,6 @@ $result = showAllNews($link);
 
 
                 </div>
-
 
                 <div class="carousel-inner">
                     <?php while (have_posts()) : the_post(); ?>
@@ -80,10 +79,11 @@ $result = showAllNews($link);
             </div>
 
         </div>
-
+        <?php endif ?>
 
         <div class="content">
             <?php while (have_posts()) : the_post(); ?>
+            <?php if (!is_single()) { ?>
             <div class="smol-new">
                 <div class="info-list">
                     <P> <?php the_time("Y-m-d"); ?> </P>
@@ -99,7 +99,27 @@ $result = showAllNews($link);
                     Читать далее..
                 </a>
             </div>
-            <?php endwhile; ?>
+            <?php } else { ?>
+            <div id="container">
+                <div id="content">
+                    <div id="big_new">
+                        <div id="data">
+                            <p>
+                                <?php the_time("Y-m-d"); ?>
+                            </p>
+                        </div>
+                        <h1 class="news">
+                            <?php the_title(); ?>
+                        </h1>
+                        <img class="big-picture" src=<?php the_post_thumbnail_url(); ?> alt="" />
+                        <p>
+                            <?php the_excerpt(); ?>
+                        </p>
+                        <a href="<?php get_home_url() ?>"> Назад </a>
+                    </div>
+                </div>
+                <?php }; ?>
+                <?php endwhile; ?>
+            </div>
         </div>
     </div>
-</div>
