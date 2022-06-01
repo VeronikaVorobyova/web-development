@@ -8,30 +8,30 @@ if (isset($_SESSION['unique_id'])) {
 <?php include_once "header.php"; ?>
 
 <body>
-  <div class="wrapper">
-    <section class="form login">
-      <header style="text-transform: uppercase; text-align: center;">messenger Waaaaasuppp</header>
-      <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
-        <div class="error-text"></div>
-        <div class="field input">
-          <label>EMail</label>
-          <input type="text" name="email" required>
-        </div>
-        <div class="field input">
-          <label>Password</label>
-          <input type="password" name="password" required>
-          <i class="fas fa-eye"></i>
-        </div>
-        <div class="field button">
-          <input type="submit" name="submit" value="Start using Waaaaasuppp">
-        </div>
-      </form>
-      <div class="link">You do not have an account? <a href="index.php"> Register</a></div>
-    </section>
-  </div>
+    <div class="wrapper">
+        <section class="form login">
+            <header style="text-transform: uppercase; text-align: center;">messenger Waaaaasuppp</header>
+            <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
+                <div class="error-text"></div>
+                <div class="field input">
+                    <label>EMail</label>
+                    <input type="text" name="email" required>
+                </div>
+                <div class="field input">
+                    <label>Password</label>
+                    <input type="password" name="password" required>
+                    <i class="fas fa-eye"></i>
+                </div>
+                <div class="field button">
+                    <input type="submit" name="submit" value="Start using Waaaaasuppp">
+                </div>
+            </form>
+            <div class="link">You do not have an account? <a href="index.php"> Register</a></div>
+        </section>
+    </div>
 
-  <script src="javascript/pass-show-hide.js"></script>
-  <script src="javascript/login.js"></script>
+    <script src="javascript/pass-show-hide.js"></script>
+    <script src="javascript/login.js"></script>
 
 </body>
 

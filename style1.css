@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
 * {
     margin: 0;
     padding: 0;
@@ -102,7 +103,7 @@ body {
 }
 
 .form form .button input:hover {
-    color:#ffffff;
+    color: #ffffff;
 }
 
 .form form .field i {
@@ -200,7 +201,7 @@ body {
 }
 
 .users .search input {
-    
+
     height: 42px;
     width: calc(100% - 50px);
     font-size: 16px;
