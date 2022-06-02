@@ -10,7 +10,7 @@ if (isset($_SESSION['unique_id'])) {
 <body>
     <div class="wrapper">
         <section class="form signup">
-            <header style="text-transform: uppercase; text-align: center;">messenger Waaaaasuppp</header>
+            <header style="text-transform: uppercase; text-align: center;">Chatik</header>
             <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
                 <div class="error-text"></div>
                 <div class="field input">
@@ -37,7 +37,7 @@ if (isset($_SESSION['unique_id'])) {
                     <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>
                 </div>
                 <div class="field button">
-                    <input type="submit" name="submit" value="Start using Waaaaasuppp">
+                    <input type="submit" name="submit" value="Start using Chatik">
                 </div>
             </form>
             <div class="link">Already registered?<a href="login.php"> Log in</a></div>

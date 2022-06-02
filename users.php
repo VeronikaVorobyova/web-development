@@ -28,12 +28,9 @@ if (!isset($_SESSION['unique_id'])) {
                         <p><?php echo $row['status']; ?></p>
                     </div>
                 </div>
-                <a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout">Go out</a>
+                <a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout">Выход</a>
             </header>
-            <div class="search">
-                <input type="text" placeholder="Enter a name for your search ... ">
-                <button><i class="fas fa-search"></i></button>
-            </div>
+            
             <div class="users-list">
             </div>
         </section>

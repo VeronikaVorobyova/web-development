@@ -10,11 +10,11 @@ if (isset($_SESSION['unique_id'])) {
 <body>
     <div class="wrapper">
         <section class="form login">
-            <header style="text-transform: uppercase; text-align: center;">messenger Waaaaasuppp</header>
+            <header style="text-transform: uppercase; text-align: center;">Chatik</header>
             <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
                 <div class="error-text"></div>
                 <div class="field input">
-                    <label>EMail</label>
+                    <label>Email</label>
                     <input type="text" name="email" required>
                 </div>
                 <div class="field input">
@@ -23,7 +23,7 @@ if (isset($_SESSION['unique_id'])) {
                     <i class="fas fa-eye"></i>
                 </div>
                 <div class="field button">
-                    <input type="submit" name="submit" value="Start using Waaaaasuppp">
+                    <input type="submit" name="submit" value="Start using Chatik">
                 </div>
             </form>
             <div class="link">You do not have an account? <a href="index.php"> Register</a></div>

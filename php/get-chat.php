@@ -18,7 +18,7 @@ if (isset($_SESSION['unique_id'])) {
                 $output .= '<div class="chat outgoing">
                                 <div class="details">
                                     <p>' . $row['msg'] . '</p>
-                                    <span style="font-size:12px; position: absolute; right: 30px">' . $row['dtime'] . '</span>
+                                    
                                 </div>
                                 </div>';
             } else {
@@ -26,7 +26,7 @@ if (isset($_SESSION['unique_id'])) {
                                 <img src="php/images/' . $row['img'] . '" alt="">
                                 <div class="details">
                                     <p>' . $row['msg'] . '</p>
-                                    <span style="font-size:12px";>' . $row['dtime'] . '</span>
+                                    
                                 </div>
                                 </div>';
             }
