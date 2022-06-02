@@ -2,7 +2,7 @@
 session_start();
 include_once "php/connect_db.php";
 if (!isset($_SESSION['unique_id'])) {
-  header("location: login.php");
+    header("location: login.php");
 }
 ?>
 <?php include_once "header.php"; ?>
@@ -13,15 +13,15 @@ if (!isset($_SESSION['unique_id'])) {
             <header>
                 <div class="content">
                     <?php
-          $sql = "SELECT * FROM users WHERE unique_id = {$_SESSION['unique_id']}";
-          $stmt = $connect_db->prepare($sql);
-          $stmt->execute();
-          $result = $stmt->get_result();
-          $rows = $result->num_rows;
-          if ($rows > 0) {
-            $row = mysqli_fetch_assoc($result);
-          }
-          ?>
+                    $sql = "SELECT * FROM users WHERE unique_id = {$_SESSION['unique_id']}";
+                    $stmt = $connect_db->prepare($sql);
+                    $stmt->execute();
+                    $result = $stmt->get_result();
+                    $rows = $result->num_rows;
+                    if ($rows > 0) {
+                        $row = mysqli_fetch_assoc($result);
+                    }
+                    ?>
                     <img src="php/images/<?php echo $row['img']; ?>" alt="">
                     <div class="details">
                         <span><?php echo $row['fname'] . " " . $row['lname'] ?></span>
